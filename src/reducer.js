@@ -1,10 +1,16 @@
-import theme from "./utils/theme";
-import { addNumber, addOperand, clear, calculate } from "./utils/constants";
+import themeData from "./utils/theme";
+import {
+  addNumber,
+  addOperand,
+  clear,
+  calculate,
+  theme
+} from "./utils/constants";
 
 const defaultState = {
   theme: {
     value: "light",
-    data: theme
+    data: themeData
   },
   expression: {
     arr: [],
@@ -23,7 +29,10 @@ export default function(state = { ...defaultState }, { payload, type }) {
       return { ...state, ...payload };
 
     case clear:
-      return { ...defaultState };
+      return { ...defaultState, ...payload };
+
+    case theme:
+      return { ...state, ...payload };
 
     default:
       return { ...state };

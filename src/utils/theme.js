@@ -1,4 +1,4 @@
-const theme = {
+const themeData = {
   input: {
     light: {
       backgroundColor: "#fff",
@@ -16,7 +16,17 @@ const theme = {
     dark: {
       backgroundColor: "#000"
     }
+  },
+  button: {
+    light: {
+      color: "#000",
+      backgroundColor: "#f0f0f0"
+    },
+    dark: {
+      color: "#fff",
+      backgroundColor: "#666"
+    }
   }
 };
 
-export default theme;
+export default themeData;

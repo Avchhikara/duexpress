@@ -1,8 +1,9 @@
 import { clear } from "./../utils/constants";
 
-export default function() {
+export default function(state) {
+  const theme = state.theme;
   return {
     type: clear,
-    payload: {}
+    payload: { theme }
   };
 }

@@ -5,3 +5,5 @@ export const addOperand = "add/OPERAND";
 export const clear = "CLEAR";
 
 export const calculate = "result/CALCULATE";
+
+export const theme = "put/THEME";

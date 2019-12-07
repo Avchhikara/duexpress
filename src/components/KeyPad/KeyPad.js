@@ -16,7 +16,7 @@ class KeyPad extends React.Component {
   };
 
   clear = () => {
-    this.props.dispatch(clear());
+    this.props.dispatch(clear(this.props));
   };
 
   calc = () => {
@@ -25,62 +25,97 @@ class KeyPad extends React.Component {
   };
 
   render() {
+    const { theme } = this.props;
+    const thButton = theme.data.button[theme.value];
+
     return (
       <tbody>
         <tr>
           <td>
-            <button onClick={this.addNum}>1</button>
+            <button onClick={this.addNum} style={thButton}>
+              1
+            </button>
           </td>
           <td>
-            <button onClick={this.addNum}>2</button>
+            <button onClick={this.addNum} style={thButton}>
+              2
+            </button>
           </td>
           <td>
-            <button onClick={this.addNum}>3</button>
+            <button onClick={this.addNum} style={thButton}>
+              3
+            </button>
           </td>
           <td>
-            <button onClick={this.addOperation}>+</button>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <button onClick={this.addNum}>4</button>
-          </td>
-          <td>
-            <button onClick={this.addNum}>5</button>
-          </td>
-          <td>
-            <button onClick={this.addNum}>6</button>
-          </td>
-          <td>
-            <button onClick={this.addOperation}>-</button>
+            <button onClick={this.addOperation} style={thButton}>
+              +
+            </button>
           </td>
         </tr>
         <tr>
           <td>
-            <button onClick={this.addNum}>7</button>
+            <button onClick={this.addNum} style={thButton}>
+              4
+            </button>
           </td>
           <td>
-            <button onClick={this.addNum}>8</button>
+            <button onClick={this.addNum} style={thButton}>
+              5
+            </button>
           </td>
           <td>
-            <button onClick={this.addNum}>9</button>
+            <button onClick={this.addNum} style={thButton}>
+              6
+            </button>
           </td>
           <td>
-            <button onClick={this.addOperation}>*</button>
+            <button onClick={this.addOperation} style={thButton}>
+              -
+            </button>
           </td>
         </tr>
         <tr>
           <td>
-            <button onClick={this.clear}>Clear</button>
+            <button onClick={this.addNum} style={thButton}>
+              7
+            </button>
           </td>
           <td>
-            <button onClick={this.addNum}>0</button>
+            <button onClick={this.addNum} style={thButton}>
+              8
+            </button>
           </td>
           <td>
-            <button onClick={this.calc}>=</button>
+            <button onClick={this.addNum} style={thButton}>
+              9
+            </button>
           </td>
           <td>
-            <button onClick={this.addOperation}>/</button>
+            <button onClick={this.addOperation} style={thButton}>
+              *
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button onClick={this.clear} style={thButton}>
+              Clear
+            </button>
+          </td>
+          <td>
+            <button onClick={this.addNum} style={thButton}>
+              0
+            </button>
+          </td>
+          <td>
+            <button onClick={this.calc} style={thButton}>
+              =
+            </button>
+          </td>
+          <td>
+            <button onClick={this.addOperation} style={thButton}>
+              /
+            </button>
           </td>
         </tr>
       </tbody>

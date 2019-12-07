@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 
 import Input from "./../components/Input";
 import KeyPad from "./../components/KeyPad";
+import ThemeButtons from "./../components/Theme";
 
 import "./App.css";
 
@@ -18,6 +19,7 @@ class App extends React.Component {
             <thead></thead>
             <KeyPad />
           </table>
+          <ThemeButtons />
         </div>
       </div>
     );

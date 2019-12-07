@@ -1,20 +1,39 @@
 .calc {
   /* width: 200px; */
-  width: 170px;
+  width: 200px;
   margin: 0 auto;
-  margin-top: 30px;
+  padding-top: 30px;
+  text-align: center;
+  height: 100vh;
+  font-size: x-large;
+  font-weight: bold;
 }
 
 td {
-  min-width: 40px;
+  min-width: 47px;
   text-align: center;
 }
 
 .result {
   text-align: right;
   width: 100%;
+  font-size: xx-large;
 }
 
 button {
   width: 100%;
 }
+
+button:focus {
+  outline: none;
+}
+
+.theme-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* .theme-buttons button:nth-child(2) {
+  margin-left: 30px;
+} */
