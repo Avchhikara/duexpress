@@ -1,5 +1,5 @@
 import theme from "./utils/theme";
-import { addNumber, addOperand, clear } from "./utils/constants";
+import { addNumber, addOperand, clear, calculate } from "./utils/constants";
 
 const defaultState = {
   theme: {
@@ -17,6 +17,9 @@ export default function(state = { ...defaultState }, { payload, type }) {
     case addNumber:
       return { ...state, ...payload };
     case addOperand:
+      return { ...state, ...payload };
+
+    case calculate:
       return { ...state, ...payload };
 
     case clear:

@@ -1,7 +1,9 @@
 import { addOperand } from "../utils/constants";
+import isOperand from "./../utils/isOperand";
 
 export default function(state, operand) {
   const arr = [...state.expression.arr];
+  const latest = state.expression.latest;
   if (arr.length) {
     if (isOperand(arr[arr.length - 1])) {
       arr[arr.length - 1] = operand;
@@ -13,7 +15,7 @@ export default function(state, operand) {
       payload: {
         expression: {
           arr,
-          latest: ""
+          latest
         }
       }
     };
@@ -23,9 +25,4 @@ export default function(state, operand) {
       payload: {}
     };
   }
-}
-
-function isOperand(val) {
-  let operands = "*/+-";
-  return operands.includes(val);
 }

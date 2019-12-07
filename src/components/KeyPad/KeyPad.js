@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import addNumber from "./../../actions/addNumber";
 import addOperand from "./../../actions/addOperand";
 import clear from "./../../actions/clear";
+import calculate from "./../../actions/calculate";
 
 class KeyPad extends React.Component {
   addNum = e => {
@@ -18,9 +19,10 @@ class KeyPad extends React.Component {
     this.props.dispatch(clear());
   };
 
-  calc() {
-    console.log("Ans requested");
-  }
+  calc = () => {
+    // console.log(this.props);
+    this.props.dispatch(calculate(this.props));
+  };
 
   render() {
     return (

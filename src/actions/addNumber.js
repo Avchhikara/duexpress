@@ -1,10 +1,14 @@
 import { addNumber } from "./../utils/constants";
 
+import isOperand from "./../utils/isOperand";
+
 export default function(state, number) {
   const prev = state.expression.latest;
-  const latest = parseInt(prev + number).toString();
   const arr = [...state.expression.arr];
-  if (prev) {
+  let topIsOperand = isOperand(arr[arr.length - 1]);
+  const latest = parseInt((topIsOperand ? "" : prev) + number).toString();
+
+  if (!topIsOperand && prev) {
     arr[arr.length - 1] = latest;
   } else {
     arr.push(latest);
