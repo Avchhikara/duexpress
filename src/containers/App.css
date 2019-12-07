@@ -1,0 +1,20 @@
+.calc {
+  /* width: 200px; */
+  width: 170px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+td {
+  min-width: 40px;
+  text-align: center;
+}
+
+.result {
+  text-align: right;
+  width: 100%;
+}
+
+button {
+  width: 100%;
+}
