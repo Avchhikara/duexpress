@@ -1,16 +1,27 @@
 import theme from "./utils/theme";
+import { addNumber, addOperand, clear } from "./utils/constants";
 
-export default function(
-  state = {
-    theme: {
-      value: "light",
-      data: theme
-    },
-    expression: ["2", "+", "3", "-", "1", "*", "10"]
+const defaultState = {
+  theme: {
+    value: "light",
+    data: theme
   },
-  action
-) {
-  switch (action.type) {
+  expression: {
+    arr: [],
+    latest: ""
+  }
+};
+
+export default function(state = { ...defaultState }, { payload, type }) {
+  switch (type) {
+    case addNumber:
+      return { ...state, ...payload };
+    case addOperand:
+      return { ...state, ...payload };
+
+    case clear:
+      return { ...defaultState };
+
     default:
       return { ...state };
   }

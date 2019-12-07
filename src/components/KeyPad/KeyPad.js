@@ -1,18 +1,22 @@
 import React from "react";
 import { connect } from "react-redux";
 
+import addNumber from "./../../actions/addNumber";
+import addOperand from "./../../actions/addOperand";
+import clear from "./../../actions/clear";
+
 class KeyPad extends React.Component {
-  addNum(e) {
-    console.log(e.target.textContent);
-  }
+  addNum = e => {
+    this.props.dispatch(addNumber(this.props, e.target.textContent));
+  };
 
-  addOperation(e) {
-    console.log(e.target.textContent);
-  }
+  addOperation = e => {
+    this.props.dispatch(addOperand(this.props, e.target.textContent));
+  };
 
-  clear() {
-    console.log("clear is requested");
-  }
+  clear = () => {
+    this.props.dispatch(clear());
+  };
 
   calc() {
     console.log("Ans requested");
