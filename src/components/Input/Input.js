@@ -15,6 +15,7 @@ class Input extends React.Component {
         disabled
         style={th}
         className="result"
+        placeholder="0"
       />
     );
   }
