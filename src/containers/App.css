@@ -34,6 +34,6 @@ button:focus {
   margin-top: 20px;
 }
 
-/* .theme-buttons button:nth-child(2) {
+.theme-buttons button:nth-child(2) {
   margin-left: 30px;
-} */
+}
